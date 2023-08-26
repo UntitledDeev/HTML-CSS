@@ -1,6 +1,7 @@
-/* Default Styling */
+/* __________FONTS____________ */
 @import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200;300;400;700&display=swap");
-/* Colors */
+
+/* ____________FORMATTING___________ */
 *,
 *::before,
 *::after {
@@ -25,26 +26,25 @@ button {
   border-radius: 2.5px;
   cursor: pointer;
 }
+
+/* ___________GRADIENT CLASSES__________ */
+.blueGradient {
+  background: linear-gradient(66deg, #caedff 0%, #6ec9fa 100%);
+}
+.purpleGradient {
+  background: linear-gradient(66deg, #daceff 0%, #9f94fe 100%);
+}
+.orangeGradient {
+  background: linear-gradient(66deg, #ffdcce 0%, #f79151 100%);
+}
+
+/* _________CUSTOM CLASSES________ */
 .card__container {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 30px;
 }
-@media screen and (max-width: 825px) and (min-width: 541px) {
-  .card__container {
-    grid-template-columns: repeat(2, 1fr);
-  }
-  .card__container > div:nth-child(3) {
-    grid-row: 2/3;
-    grid-column: 1/3;
-    justify-self: center;
-  }
-}
-@media screen and (max-width: 540px) {
-  .card__container {
-    grid-template-columns: 1fr;
-  }
-}
+
 .card__item {
   padding: 8.5px;
   min-width: min-content;
@@ -87,15 +87,6 @@ button {
 .card__item--btn-ul > ul li {
   padding: 7.5px 5px;
 }
-.blueGradient {
-  background: linear-gradient(66deg, #caedff 0%, #6ec9fa 100%);
-}
-.purpleGradient {
-  background: linear-gradient(66deg, #daceff 0%, #9f94fe 100%);
-}
-.orangeGradient {
-  background: linear-gradient(66deg, #ffdcce 0%, #f79151 100%);
-}
 .container-1200 {
   width: 100%;
   max-width: 1200px;
@@ -132,4 +123,21 @@ button {
 .btn-dark:hover {
   background-color: #f8fafe;
   color: #303030;
+}
+
+/* ________MAKING RESPONSIVE USING MEDIA QUERIES________ */
+@media screen and (max-width: 825px) and (min-width: 541px) {
+  .card__container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .card__container > div:nth-child(3) {
+    grid-row: 2/3;
+    grid-column: 1/3;
+    justify-self: center;
+  }
+}
+@media screen and (max-width: 540px) {
+  .card__container {
+    grid-template-columns: 1fr;
+  }
 }
